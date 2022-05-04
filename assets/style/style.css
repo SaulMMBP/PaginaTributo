@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
+
+/* variables */
+:root {
+    --height-nav: 8vh;
+    --padding-general: 6vw;
+}
+
+
+/* estilo general */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    /* 100% = 16px = 1rem*/
+    font-size: 100%;
+}
+
+body {
+    background-color: #0e0e0e;
+    color: white;
+    font-family: 'Cinzel', serif;
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+h2 {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+cite {
+    width: 100%;
+    font-size: 2rem;
+}
+
+.citation-div p {
+    text-align: right;
+    margin-top: 1.5rem;
+}
+
+
+/* Barra de navegación */
+nav {
+    position: fixed;
+    background-color: #1f1f1f;
+    width: 100%;
+    max-height: var(--height-nav);
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 2rem;
+}
+
+nav ul {
+    display: flex;
+    padding: 10px 0px;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+}
+
+nav li {
+    padding: 0px 64px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+#logo-div {
+    margin: 0px;
+    padding: 0px;
+    width: 64px;
+}
+
+#logo-div img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* Sección 1 */
+#home {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    padding: var(--height-nav) var(--padding-general);
+}
+
+#home .img-div {
+    width: 100%;
+    height: auto;
+}
+
+#home img {
+    height: 100%;
+    width: auto;
+}
+
+#home .text-div {
+    width: 100%;
+    text-align: center;
+    padding-top: 10%;
+}
+
+#home .title-div {
+    width: 100%;
+    margin: 10% 0;
+}
+
+#home .title-div p {
+    font-size: 2rem;
+}
+
+
+/* Sección 2 */
+#biografia {
+    background-color: #f2f2f2;
+    color: black;
+    min-height: 100vh;
+    padding: var(--height-nav) var(--padding-general);
+}
+
+#biografia .img-div {
+    width: 100%;
+    margin: 4rem 0;
+    display: flex;
+    justify-content:flex-end;
+}
+
+#biografia .img-div img{
+    width: 20vw;
+    height: auto;
+    
+}
+
+
+/* Sección 3 */
+#discografia {
+    min-height: 100vh;
+    padding: var(--height-nav) var(--padding-general);
+}
+
+.albums-div {
+    margin: 0 20%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 200px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.album-div {
+    background-color: #1f1f1f;
+    padding: 24px;
+}
+
+.disc-img-div {
+    margin-bottom: 4px;
+}
+
+.disc-img-div img{
+    width: 100%;
+    height: auto;
+}
+
+.album-div p {
+    margin-top: 4px;
+}
+
+/* footer */
+footer {
+    max-height: var(--height-nav);
+    display: flex;
+    align-items: center;
+    background-color: #1f1f1f;
+    padding: 0 var(--padding-general);
+}
+
+footer ul {
+    display: flex;
+    padding: 10px 0px;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    font-size: 2rem;
+}
+
+footer li {
+    margin: 14px;
+}
+
+footer p {
+    font-size: 2rem;
+    margin-right: 10%;
+}
+
+footer a {
+    color: white;
+}
