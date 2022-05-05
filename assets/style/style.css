@@ -5,6 +5,7 @@
 :root {
     --height-nav: 8vh;
     --padding-general: 6vw;
+    --albums-columns: 3;
 }
 
 
@@ -53,23 +54,22 @@ cite {
 
 /* Barra de navegación */
 nav {
+    padding: 10px 0px;
     position: fixed;
     background-color: #1f1f1f;
     width: 100%;
     max-height: var(--height-nav);
-    margin: 0px;
-    padding: 0px;
-    display: flex;
-    justify-content: space-around;
     font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 nav ul {
+    list-style: none;
     display: flex;
-    padding: 10px 0px;
     flex-direction: row;
     align-items: center;
-    list-style: none;
 }
 
 nav li {
@@ -84,7 +84,7 @@ nav a {
 #logo-div {
     margin: 0px;
     padding: 0px;
-    width: 64px;
+    width: 4rem;
 }
 
 #logo-div img {
@@ -156,16 +156,21 @@ nav a {
 }
 
 .albums-div {
-    margin: 0 20%;
+    padding: 0 10%;
+    width: 100%;
+    height: auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-gap: 200px;
+    grid-template-columns: repeat(var(--albums-columns), auto);
+    grid-auto-flow: row;
+    gap: 8vw;
+    justify-items: center;
     text-align: center;
     font-size: 1.5rem;
 }
 
 .album-div {
+    width: 15vw;
+    min-width: 200px;
     background-color: #1f1f1f;
     padding: 24px;
 }
@@ -179,15 +184,38 @@ nav a {
     height: auto;
 }
 
-.album-div p {
+.album-div a {
     margin-top: 4px;
+    color: white;
+    text-decoration: none;
+}
+
+.button-div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 64px 0;
+}
+
+.button-div button {
+    background-color: #1f1f1f;
+    width: 15vw;
+    height: 64px;
+    font-family: 'Cinzel', serif;
+    font-size: 1.125rem;
+}
+
+.button-div a {
+    text-decoration: none;
+    color: white;
 }
 
 /* footer */
 footer {
-    max-height: var(--height-nav);
     display: flex;
     align-items: center;
+    justify-content: space-between;
     background-color: #1f1f1f;
     padding: 0 var(--padding-general);
 }
@@ -207,9 +235,46 @@ footer li {
 
 footer p {
     font-size: 2rem;
-    margin-right: 10%;
 }
 
 footer a {
     color: white;
+}
+
+/* Responsive */
+@media (max-width: 1920px) and (aspect-ratio: 16/9) {
+    html {
+        font-size: 90%;
+    }
+}
+
+@media (max-width: 1600px) and (aspect-ratio: 16/9) {
+    html {
+        font-size: 60%;
+    }
+
+    .button-div button {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 1280px) and (aspect-ratio: 16/9) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media (max-width: 1280px) and (aspect-ratio: 16/9) {
+    html {
+        font-size: 45%;
+    }
+    :root {
+        --albums-columns: 2;
+    }
+}
+
+@media (max-width: 854px) and (aspect-ratio: 16/9) {
+    html {
+        font-size: 38%;
+    }
 }
