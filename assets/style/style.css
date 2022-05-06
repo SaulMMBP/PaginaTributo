@@ -70,10 +70,11 @@ nav ul {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-around;
 }
 
 nav li {
-    padding: 0px 64px;
+    padding: 0 10%;
 }
 
 nav a {
@@ -96,14 +97,12 @@ nav a {
 /* Sección 1 */
 #home {
     display: flex;
-    width: 100%;
     min-height: 100vh;
     padding: var(--height-nav) var(--padding-general);
 }
 
 #home .img-div {
-    width: 100%;
-    height: auto;
+    height: 90vh;
 }
 
 #home img {
@@ -153,6 +152,9 @@ nav a {
 #discografia {
     min-height: 100vh;
     padding: var(--height-nav) var(--padding-general);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .albums-div {
@@ -162,7 +164,7 @@ nav a {
     display: grid;
     grid-template-columns: repeat(var(--albums-columns), auto);
     grid-auto-flow: row;
-    gap: 8vw;
+    gap: 4vmin;
     justify-items: center;
     text-align: center;
     font-size: 1.5rem;
@@ -191,24 +193,19 @@ nav a {
 }
 
 .button-div {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 64px 0;
-}
-
-.button-div button {
-    background-color: #1f1f1f;
+    margin: 4rem;
+    padding: 2rem 0;
     width: 15vw;
-    height: 64px;
+    height: 8rem;
+    background-color: #1f1f1f;
+    text-align: center;
+    font-size: 1.5rem;
     font-family: 'Cinzel', serif;
-    font-size: 1.125rem;
 }
 
 .button-div a {
-    text-decoration: none;
     color: white;
+    text-decoration: none;
 }
 
 /* footer */
@@ -242,39 +239,66 @@ footer a {
 }
 
 /* Responsive */
-@media (max-width: 1920px) and (aspect-ratio: 16/9) {
-    html {
-        font-size: 90%;
+@media (max-aspect-ratio: 4/3) {
+    #home {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #home .img-div {
+        width: 100%;
+        height: auto;
+    }
+
+    #home img {
+        width: 100%;
+        height: auto;
     }
 }
 
-@media (max-width: 1600px) and (aspect-ratio: 16/9) {
+@media (max-width: 1920px) {
     html {
-        font-size: 60%;
-    }
-
-    .button-div button {
-        font-size: 1.5rem;
+        font-size: 75%;
     }
 }
 
-@media (max-width: 1280px) and (aspect-ratio: 16/9) {
+@media (max-width: 1600px) {
     html {
-        font-size: 50%;
+        font-size: 62.5%;
     }
 }
 
-@media (max-width: 1280px) and (aspect-ratio: 16/9) {
+@media (max-width: 1366px) {
     html {
-        font-size: 45%;
+        font-size: 53.3%;
     }
+}
+
+@media (max-width: 1024px) {
+    html {
+        font-size: 40%;
+    }
+}
+
+@media (max-width: 940px) {
     :root {
         --albums-columns: 2;
     }
 }
 
-@media (max-width: 854px) and (aspect-ratio: 16/9) {
+@media (max-width: 854px) {
     html {
-        font-size: 38%;
+        font-size: 33%;
+    }
+
+    .button-div button {
+        width: 30vw;
+        height: 64px;
+    }
+}
+
+@media (max-width: 640px) {
+    :root {
+        --albums-columns: 1;
     }
 }
